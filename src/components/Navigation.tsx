@@ -38,7 +38,7 @@ export const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="sm:hidden p-2"
+            className="sm:hidden p-2 text-black"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
