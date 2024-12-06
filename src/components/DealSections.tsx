@@ -7,7 +7,7 @@ export const DealSections = () => {
   return (
     <>
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+        <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">
           Curated Investment Opportunities
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -57,7 +57,7 @@ const DealSection = ({
           <div className="bg-primary/10 p-2 rounded-full">
             {icon}
           </div>
-          <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+          <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">
             {title}
           </h2>
         </div>
