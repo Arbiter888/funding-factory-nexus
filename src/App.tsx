@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import SeedFunding from "./pages/SeedFunding";
 import AngelSyndicate from "./pages/AngelSyndicate";
-import Investors from "./pages/Investors";
+import AboutUs from "./pages/AboutUs";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +20,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/seed-funding" element={<SeedFunding />} />
           <Route path="/angel-syndicate" element={<AngelSyndicate />} />
-          <Route path="/investors" element={<Investors />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
