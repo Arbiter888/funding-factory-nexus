@@ -30,9 +30,9 @@ export const DealSections = () => {
       />
       
       <DealSection 
-        title="Active Due Diligence" 
+        title="Capital Committed" 
         icon={<Handshake className="h-5 w-5 text-primary" />}
-        description="Deals currently under review by our investment committee"
+        description="Portfolio companies we've already invested in"
         deals={startupData.slice(2)}
       />
     </>
