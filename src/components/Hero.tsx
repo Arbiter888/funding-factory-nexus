@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 export const Hero = () => {
   const [activeSection, setActiveSection] = useState<'syndicate' | 'expansion'>('expansion');
 
+  const toggleSection = (section: 'syndicate' | 'expansion') => {
+    setActiveSection(section);
+  };
+
   return (
     <div className="pt-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary">
       <div className="max-w-7xl mx-auto text-center">
@@ -32,14 +36,15 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
           <Button 
             className="bg-primary hover:bg-primary/90"
+            onClick={() => toggleSection('expansion')}
           >
             <Globe className="mr-2 h-4 w-4" />
-            Explore Global Opportunities
+            Founder Relocation
           </Button>
           <Button 
             variant="outline" 
             className={`border-primary/20 hover:bg-primary/10 ${activeSection === 'syndicate' ? 'ring-2 ring-primary' : ''}`}
-            onClick={() => setActiveSection(activeSection === 'syndicate' ? 'expansion' : 'syndicate')}
+            onClick={() => toggleSection('syndicate')}
           >
             <Users className="mr-2 h-4 w-4" />
             Join Angel Syndicate
