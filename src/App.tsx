@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import SeedFunding from "./pages/SeedFunding";
 import AngelSyndicate from "./pages/AngelSyndicate";
 import AboutUs from "./pages/AboutUs";
+import FounderValueAdd from "./pages/FounderValueAdd";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/seed-funding" element={<SeedFunding />} />
           <Route path="/angel-syndicate" element={<AngelSyndicate />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/founder-value-add" element={<FounderValueAdd />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
