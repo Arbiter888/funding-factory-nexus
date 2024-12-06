@@ -11,7 +11,7 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative pt-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary min-h-screen">
+    <div className="relative min-h-screen flex items-center bg-gradient-to-b from-background to-secondary px-4 sm:px-6 lg:px-8">
       {/* Background image with overlay */}
       <div 
         className="absolute inset-0 z-0"
@@ -26,7 +26,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
+      <div className="relative z-10 max-w-7xl mx-auto text-center py-32">
         <h1 className="text-5xl sm:text-6xl font-bold mb-6">
           <span className="text-foreground">Bringing </span>
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">American Risk Capital</span>
@@ -129,7 +129,7 @@ export const Hero = () => {
           </div>
         )}
 
-        <div className="mb-16">
+        <div className="mt-24 mb-16">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-50">
             <img src="/placeholder.svg" alt="Platform 1" className="h-8 invert" />
             <img src="/placeholder.svg" alt="Platform 2" className="h-8 invert" />
