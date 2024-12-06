@@ -35,7 +35,7 @@ export const Hero = () => {
         </h1>
         
         <p className="text-xl text-muted-foreground mb-8">
-          Commonwealth Capital: Revolutionizing seed-stage investments by connecting exceptional founders with smart capital
+          Become a cowboy in the modern frontier: Submit your pitch to join our founder network or invest alongside us in our Angel syndicate
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
