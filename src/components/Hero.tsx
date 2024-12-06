@@ -28,14 +28,12 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto text-center py-32">
         <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-          <span className="text-foreground">Bringing </span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">American Risk Capital</span>
-          <span className="text-foreground"> to </span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">New Markets</span>
+          <span className="text-foreground">Become a Modern </span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">Frontier Cowboy</span>
         </h1>
         
-        <p className="text-xl text-muted-foreground mb-8">
-          Become a cowboy in the modern frontier: Submit your pitch to join our founder network or invest alongside us in our Angel syndicate
+        <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          In the new frontier of global tech, cowboys aren't just riding horses - they're building companies and backing visionary founders. Join our elite network as either a founder pioneering new markets or an angel investing in the next generation of tech pioneers.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
@@ -44,7 +42,7 @@ export const Hero = () => {
             onClick={() => toggleSection('expansion')}
           >
             <Globe className="mr-2 h-4 w-4" />
-            Founder Relocation
+            Become a Founder Cowboy
           </Button>
           <Button 
             variant="outline" 
@@ -52,15 +50,15 @@ export const Hero = () => {
             onClick={() => toggleSection('syndicate')}
           >
             <Users className="mr-2 h-4 w-4" />
-            Join Angel Syndicate
+            Join the Angel Posse
           </Button>
         </div>
 
         {activeSection === 'expansion' && (
           <div className="bg-secondary/50 backdrop-blur-sm rounded-xl p-6 mb-16 max-w-3xl mx-auto border border-primary/20">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Global Expansion Support</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Pioneer New Markets</h2>
             <p className="text-muted-foreground mb-6">
-              We help UK-based founders relocate and expand to high-growth markets
+              Like the cowboys of old who ventured into uncharted territories, we help ambitious founders expand their reach across borders and conquer new markets
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left mb-6">
               <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
@@ -68,26 +66,26 @@ export const Hero = () => {
                   <MapPin className="h-5 w-5 text-primary" />
                   <h3 className="font-semibold text-foreground">United States</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Access to the world's largest tech market</p>
+                <p className="text-muted-foreground text-sm">Your gateway to the world's largest tech frontier</p>
               </div>
               <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin className="h-5 w-5 text-primary" />
                   <h3 className="font-semibold text-foreground">Dubai</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Tax-efficient hub for MENA market</p>
+                <p className="text-muted-foreground text-sm">The new silk road to MENA opportunities</p>
               </div>
               <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin className="h-5 w-5 text-primary" />
                   <h3 className="font-semibold text-foreground">Southeast Asia</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Access to rapid growth markets</p>
+                <p className="text-muted-foreground text-sm">Tap into the fastest-growing digital economies</p>
               </div>
             </div>
-            <Link to="/angel-syndicate">
+            <Link to="/seed-funding">
               <Button variant="outline" className="border-primary/20 hover:bg-primary/10">
-                Learn More About Global Expansion
+                Submit Your Pitch
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -98,29 +96,29 @@ export const Hero = () => {
 
         {activeSection === 'syndicate' && (
           <div className="bg-secondary/50 backdrop-blur-sm rounded-xl p-6 mb-16 max-w-3xl mx-auto border border-primary/20 animate-in fade-in slide-in-from-bottom-4">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Join Our Angel Syndicate</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Join the Angel Posse</h2>
             <p className="text-muted-foreground mb-6">
-              Become part of an exclusive network of angel investors and get access to pre-vetted investment opportunities
+              Ride alongside fellow angels in our exclusive syndicate. Like the cattle drives of old, we pool our resources and expertise to back the most promising ventures
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-6">
               <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
                 <div className="flex items-center gap-2 mb-2">
                   <Brain className="h-5 w-5 text-primary" />
-                  <h3 className="font-semibold text-foreground">Expert Due Diligence</h3>
+                  <h3 className="font-semibold text-foreground">Scout the Best Deals</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Access thoroughly vetted investment opportunities with comprehensive analysis</p>
+                <p className="text-muted-foreground text-sm">Access thoroughly vetted opportunities with our expert due diligence</p>
               </div>
               <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
                 <div className="flex items-center gap-2 mb-2">
                   <Users className="h-5 w-5 text-primary" />
-                  <h3 className="font-semibold text-foreground">Exclusive Network</h3>
+                  <h3 className="font-semibold text-foreground">Ride with the Best</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Connect with experienced investors and industry experts</p>
+                <p className="text-muted-foreground text-sm">Join an elite network of experienced investors and industry experts</p>
               </div>
             </div>
             <Link to="/angel-syndicate">
               <Button variant="outline" className="border-primary/20 hover:bg-primary/10">
-                Learn More About Angel Syndicate
+                Join the Syndicate
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
