@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Globe, Search, Users } from "lucide-react";
+import { Globe, Search, Users, MapPin } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -16,7 +16,7 @@ export const Hero = () => {
           Commonwealth Capital: Revolutionizing seed-stage investments by connecting exceptional founders with smart capital
         </p>
         
-        <div className="max-w-2xl mx-auto mb-8 relative">
+        <div className="max-w-2xl mx-auto mb-12">
           <Input 
             type="text" 
             placeholder="Search Companies..." 
@@ -37,18 +37,31 @@ export const Hero = () => {
         </div>
 
         <div className="bg-secondary/50 backdrop-blur-sm rounded-xl p-6 mb-16 max-w-3xl mx-auto border border-primary/20">
-          <h2 className="text-2xl font-semibold text-foreground mb-4">Join Our Scout Network</h2>
-          <p className="text-muted-foreground mb-4">
-            Earn carry and referral fees by connecting us with exceptional founders in your network.
+          <h2 className="text-2xl font-semibold text-foreground mb-4">Global Expansion Support</h2>
+          <p className="text-muted-foreground mb-6">
+            We help UK-based founders relocate and expand to high-growth markets:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
             <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
-              <h3 className="font-semibold text-foreground">Carry Share</h3>
-              <p className="text-muted-foreground">Get a share of the investment upside for successful referrals</p>
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="h-5 w-5 text-primary" />
+                <h3 className="font-semibold text-foreground">United States</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">Access to the world's largest tech market and venture capital</p>
             </div>
             <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
-              <h3 className="font-semibold text-foreground">Referral Fee</h3>
-              <p className="text-muted-foreground">Earn immediate rewards for successful introductions</p>
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="h-5 w-5 text-primary" />
+                <h3 className="font-semibold text-foreground">Dubai</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">Tax-efficient hub for MENA market expansion</p>
+            </div>
+            <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="h-5 w-5 text-primary" />
+                <h3 className="font-semibold text-foreground">Southeast Asia</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">Access to rapid growth markets and tech talent</p>
             </div>
           </div>
         </div>
