@@ -23,14 +23,14 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="font-semibold text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-            Commonwealth Bridge Capital
+            Commonwealth Capital
           </Link>
           
           <div className="hidden sm:flex space-x-8">
             <NavLink to="/" current={location.pathname === "/"}>Home</NavLink>
             <NavLink to="/seed-funding" current={location.pathname === "/seed-funding"}>Seed Funding</NavLink>
             <NavLink to="/angel-syndicate" current={location.pathname === "/angel-syndicate"}>Angel Syndicate</NavLink>
-            <NavLink to="/investors" current={location.pathname === "/investors"}>Investors</NavLink>
+            <NavLink to="/about-us" current={location.pathname === "/about-us"}>About Us</NavLink>
           </div>
         </div>
       </div>

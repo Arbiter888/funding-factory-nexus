@@ -4,7 +4,7 @@ import { Globe, Search, Users } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div className="pt-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary">
+    <div className="pt-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary">
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="text-5xl sm:text-6xl font-bold mb-6">
           <span className="text-foreground">Bringing </span>
@@ -13,7 +13,7 @@ export const Hero = () => {
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">New Markets</span>
         </h1>
         <p className="text-xl text-muted-foreground mb-8">
-          Revolutionizing seed-stage investments by connecting exceptional founders with smart capital
+          Commonwealth Capital: Revolutionizing seed-stage investments by connecting exceptional founders with smart capital
         </p>
         
         <div className="max-w-2xl mx-auto mb-8 relative">
