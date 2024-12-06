@@ -1,4 +1,4 @@
-import { Clock, TrendingUp, Users, Package, HandShake } from "lucide-react";
+import { Clock, TrendingUp, Users, Package, Handshake } from "lucide-react";
 import { DealCard } from "./DealCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { startupData } from "@/data/startupData";
@@ -22,7 +22,7 @@ export const DealSections = () => {
       
       <DealSection 
         title="Active Due Diligence" 
-        icon={<HandShake className="h-5 w-5" />}
+        icon={<Handshake className="h-5 w-5" />}
         description="Deals currently under review by our investment committee"
         deals={startupData.slice(2)}
       />
