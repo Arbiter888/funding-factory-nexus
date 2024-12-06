@@ -58,58 +58,6 @@ const AngelSyndicate = () => {
             </p>
           </div>
 
-          {/* Global Expansion Support Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-              Global Expansion Support
-            </h2>
-            <div className="bg-secondary/50 backdrop-blur-sm rounded-xl p-8 border border-primary/20">
-              <p className="text-xl text-muted-foreground mb-8">
-                We help UK-based founders relocate and expand to high-growth markets, providing comprehensive support and access to local networks.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-background/50 p-6 rounded-lg border border-primary/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold text-foreground">United States</h3>
-                  </div>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>Access to the world's largest tech market</li>
-                    <li>Silicon Valley networking opportunities</li>
-                    <li>US venture capital connections</li>
-                    <li>Visa and relocation support</li>
-                  </ul>
-                </div>
-
-                <div className="bg-background/50 p-6 rounded-lg border border-primary/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold text-foreground">Dubai</h3>
-                  </div>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>Tax-efficient hub for MENA market</li>
-                    <li>Fast-growing tech ecosystem</li>
-                    <li>Government incentives and support</li>
-                    <li>Strategic location for expansion</li>
-                  </ul>
-                </div>
-
-                <div className="bg-background/50 p-6 rounded-lg border border-primary/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold text-foreground">Southeast Asia</h3>
-                  </div>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>Access to rapid growth markets</li>
-                    <li>Tech talent pools</li>
-                    <li>Local partnership opportunities</li>
-                    <li>Market entry strategy support</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Syndicate Directory Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
