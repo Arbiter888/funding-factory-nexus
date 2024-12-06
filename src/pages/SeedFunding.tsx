@@ -24,9 +24,9 @@ const SeedFunding = () => {
       <main className="pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">
               Seed Funding Application
-            </h1>
+            </h2>
             <p className="text-muted-foreground">
               We invest £500K-£2M in early-stage companies with exceptional founding teams.
             </p>
