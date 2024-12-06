@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Globe, Search, Users, MapPin, Brain, LineChart, MessageSquare } from "lucide-react";
+import { Globe, Users, MapPin, Brain } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -38,15 +37,6 @@ export const Hero = () => {
         <p className="text-xl text-muted-foreground mb-8">
           Commonwealth Capital: Revolutionizing seed-stage investments by connecting exceptional founders with smart capital
         </p>
-        
-        <div className="max-w-2xl mx-auto mb-12">
-          <Input 
-            type="text" 
-            placeholder="Search Companies..." 
-            className="w-full h-12 pl-12 pr-4 rounded-lg bg-secondary/50 border-secondary-foreground/10 focus:border-primary"
-          />
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-        </div>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
           <Button 
