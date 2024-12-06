@@ -18,11 +18,11 @@ export const Navigation = () => {
   return (
     <nav className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300",
-      scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+      scrolled ? "bg-background/80 backdrop-blur-md border-b border-primary/20" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-semibold text-xl">
+          <Link to="/" className="font-semibold text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
             Commonwealth Bridge Capital
           </Link>
           
@@ -42,8 +42,8 @@ const NavLink = ({ to, children, current }: { to: string; children: React.ReactN
   <Link
     to={to}
     className={cn(
-      "transition-colors duration-200 hover:text-gray-600",
-      current ? "text-gray-900" : "text-gray-500"
+      "transition-colors duration-200 hover:text-primary",
+      current ? "text-primary" : "text-muted-foreground"
     )}
   >
     {children}
