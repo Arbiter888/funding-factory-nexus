@@ -49,7 +49,7 @@ export const Navigation = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-black">
               <MobileNavLink to="/" current={location.pathname === "/"} onClick={() => setMobileMenuOpen(false)}>
                 Home
               </MobileNavLink>
@@ -100,7 +100,7 @@ const MobileNavLink = ({
       "block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200",
       current 
         ? "bg-primary/10 text-primary" 
-        : "text-gray-600 hover:bg-primary/5 hover:text-primary"
+        : "text-black hover:bg-primary/5 hover:text-primary"
     )}
   >
     {children}
