@@ -4,6 +4,31 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const syndicateMembers = [
+  {
+    name: "Alexandra Chen",
+    expertise: "AI/ML & Deep Tech",
+    investments: 12,
+    bio: "Former CTO with 15+ years in tech, focused on AI startups",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&auto=format&fit=crop"
+  },
+  {
+    name: "Marcus Thompson",
+    expertise: "FinTech & Blockchain",
+    investments: 8,
+    bio: "Serial entrepreneur, founded and sold 3 fintech startups",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&auto=format&fit=crop"
+  },
+  {
+    name: "Sarah Williams",
+    expertise: "SaaS & B2B",
+    investments: 15,
+    bio: "20+ years in enterprise software sales and scaling",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&auto=format&fit=crop"
+  }
+];
 
 const AngelSyndicate = () => {
   const [loading, setLoading] = useState(false);
@@ -23,15 +48,47 @@ const AngelSyndicate = () => {
       <Navigation />
       
       <main className="pt-24 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Syndicate Directory Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">Angel Syndicate Members</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {syndicateMembers.map((member) => (
+                <Card key={member.name} className="hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader>
+                    <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <CardTitle className="text-xl text-center">{member.name}</CardTitle>
+                    <CardDescription className="text-center text-purple-600 font-medium">
+                      {member.expertise}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-500">{member.investments} investments</span>
+                      <Button variant="outline" size="sm">Connect</Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Application Form Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 text-gray-900">Angel Syndicate</h1>
+            <h1 className="text-4xl font-bold mb-4 text-gray-900">Join Our Angel Syndicate</h1>
             <p className="text-gray-600">
               Join our exclusive network of angel investors and get access to pre-seed investment opportunities.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm max-w-3xl mx-auto">
             <div className="space-y-4">
               <FormField label="Full Name" required>
                 <Input placeholder="Enter your full name" />
