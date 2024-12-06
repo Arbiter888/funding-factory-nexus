@@ -8,21 +8,21 @@ export const DealSections = () => {
     <>
       <DealSection 
         title="Angel Network Top Picks" 
-        icon={<Users className="h-5 w-5" />}
+        icon={<Users className="h-5 w-5 text-primary" />}
         description="Highly rated opportunities by our angel network"
         deals={startupData}
       />
       
       <DealSection 
         title="New Deal Flow" 
-        icon={<Package className="h-5 w-5" />}
+        icon={<Package className="h-5 w-5 text-primary" />}
         description="Fresh opportunities from emerging markets"
         deals={startupData.slice(1, 3)}
       />
       
       <DealSection 
         title="Active Due Diligence" 
-        icon={<Handshake className="h-5 w-5" />}
+        icon={<Handshake className="h-5 w-5 text-primary" />}
         description="Deals currently under review by our investment committee"
         deals={startupData.slice(2)}
       />
@@ -45,12 +45,14 @@ const DealSection = ({
     <section className="mb-16">
       <div className="flex flex-col mb-6">
         <div className="flex items-center gap-2 mb-2">
-          <div className="bg-gray-100 p-2 rounded-full">
+          <div className="bg-primary/10 p-2 rounded-full">
             {icon}
           </div>
-          <h2 className="text-xl font-semibold">{title}</h2>
+          <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            {title}
+          </h2>
         </div>
-        <p className="text-gray-600 ml-10">{description}</p>
+        <p className="text-muted-foreground ml-10">{description}</p>
       </div>
       
       <Carousel className="w-full">
@@ -61,8 +63,8 @@ const DealSection = ({
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="bg-secondary/50 border-primary/20 hover:bg-primary/10" />
+        <CarouselNext className="bg-secondary/50 border-primary/20 hover:bg-primary/10" />
       </Carousel>
     </section>
   );
