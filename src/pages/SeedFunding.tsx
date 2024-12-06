@@ -11,7 +11,6 @@ const SeedFunding = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate form submission
     setTimeout(() => {
       setLoading(false);
       toast.success("Application submitted successfully!");
@@ -19,47 +18,49 @@ const SeedFunding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-background via-background/95 to-background/90">
       <Navigation />
       
       <main className="pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 text-gray-900">Seed Funding Application</h1>
-            <p className="text-gray-600">
-              We invest $500K-$2M in early-stage companies with exceptional founding teams.
+            <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+              Seed Funding Application
+            </h1>
+            <p className="text-muted-foreground">
+              We invest £500K-£2M in early-stage companies with exceptional founding teams.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/50 backdrop-blur-sm p-8 rounded-lg border border-primary/20">
             <div className="space-y-4">
               <FormField label="Company Name" required>
-                <Input placeholder="Enter your company name" />
+                <Input placeholder="Enter your company name" className="bg-background/50" />
               </FormField>
 
               <FormField label="Website" required>
-                <Input type="url" placeholder="https://" />
+                <Input type="url" placeholder="https://" className="bg-background/50" />
               </FormField>
 
               <FormField label="Pitch Deck" required>
-                <Input type="file" accept=".pdf,.ppt,.pptx" />
+                <Input type="file" accept=".pdf,.ppt,.pptx" className="bg-background/50" />
               </FormField>
 
               <FormField label="Company Description" required>
                 <Textarea 
                   placeholder="Tell us about your company and what problem you're solving"
-                  className="h-32"
+                  className="h-32 bg-background/50"
                 />
               </FormField>
 
               <FormField label="Funding Amount" required>
-                <Input type="number" placeholder="Amount in USD" />
+                <Input type="number" placeholder="Amount in GBP" className="bg-background/50" />
               </FormField>
             </div>
 
             <Button 
               type="submit" 
-              className="w-full bg-gray-900 hover:bg-gray-800"
+              className="w-full bg-primary hover:bg-primary/90"
               disabled={loading}
             >
               {loading ? "Submitting..." : "Submit Application"}
@@ -81,8 +82,8 @@ const FormField = ({
   children: React.ReactNode;
 }) => (
   <div>
-    <label className="block text-sm font-medium text-gray-700 mb-1">
-      {label} {required && <span className="text-red-500">*</span>}
+    <label className="block text-sm font-medium text-foreground mb-1">
+      {label} {required && <span className="text-destructive">*</span>}
     </label>
     {children}
   </div>
