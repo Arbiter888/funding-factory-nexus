@@ -16,10 +16,11 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="text-5xl sm:text-6xl font-bold mb-6">
           <span className="text-foreground">Bringing </span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">American Risk Capital</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">American Risk Capital</span>
           <span className="text-foreground"> to </span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">New Markets</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">New Markets</span>
         </h1>
+        
         <p className="text-xl text-muted-foreground mb-8">
           Commonwealth Capital: Revolutionizing seed-stage investments by connecting exceptional founders with smart capital
         </p>
