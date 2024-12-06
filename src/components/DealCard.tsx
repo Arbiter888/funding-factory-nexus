@@ -1,9 +1,21 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import { startupData } from "@/data/startupData";
 
 export const DealCard = ({ deal }: { deal: typeof startupData[0] }) => {
+  const handleCoInvest = () => {
+    window.location.href = `mailto:george@multiplier.info?subject=Co-investment Interest: ${deal.name}&body=I am interested in co-investing in ${deal.name}.`;
+    toast.success("Opening email client to express co-investment interest");
+  };
+
+  const handleRequestDetails = () => {
+    window.location.href = `mailto:george@multiplier.info?subject=Investment Memorandum Request: ${deal.name}&body=I would like to request the investment memorandum for ${deal.name}.`;
+    toast.success("Opening email client to request investment memorandum");
+  };
+
   return (
     <Card className="h-full bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">
       <CardContent className="p-4">
@@ -70,11 +82,27 @@ export const DealCard = ({ deal }: { deal: typeof startupData[0] }) => {
             <span className="text-foreground">Raised: £{(deal.raised).toLocaleString()}</span>
             <span className="text-muted-foreground">of £{(deal.target).toLocaleString()}</span>
           </div>
-          <div className="w-full bg-secondary rounded-full h-2 mt-2">
+          <div className="w-full bg-secondary rounded-full h-2 mt-2 mb-4">
             <div 
               className="bg-primary h-2 rounded-full" 
               style={{ width: `${(deal.raised / deal.target) * 100}%` }} 
             />
+          </div>
+          <div className="flex gap-2">
+            <Button 
+              variant="default" 
+              className="w-full" 
+              onClick={handleCoInvest}
+            >
+              Co-invest
+            </Button>
+            <Button 
+              variant="outline" 
+              className="w-full" 
+              onClick={handleRequestDetails}
+            >
+              Request Details
+            </Button>
           </div>
         </div>
       </CardContent>

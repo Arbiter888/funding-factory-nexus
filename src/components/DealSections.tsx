@@ -6,6 +6,15 @@ import { startupData } from "@/data/startupData";
 export const DealSections = () => {
   return (
     <>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+          Curated Investment Opportunities
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Discover high-potential startups vetted by our expert investment team. Each opportunity is thoroughly analyzed using our proprietary AI scoring system.
+        </p>
+      </div>
+
       <DealSection 
         title="Angel Network Top Picks" 
         icon={<Users className="h-5 w-5 text-primary" />}
