@@ -1,4 +1,6 @@
 import { Users, Heart, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const ValueAddSection = () => {
   return (
@@ -43,6 +45,12 @@ export const ValueAddSection = () => {
               Access to expert board members and ongoing support for follow-on investment rounds to ensure sustainable growth.
             </p>
           </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Link to="/seed-funding">Apply for Seed Funding</Link>
+          </Button>
         </div>
       </div>
     </section>
