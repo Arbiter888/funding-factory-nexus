@@ -126,7 +126,6 @@ export const Hero = () => {
         )}
 
         <div className="mb-16">
-          <p className="text-muted-foreground mb-8">Analyzing the best startups across investment platforms such as:</p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-50">
             <img src="/placeholder.svg" alt="Platform 1" className="h-8 invert" />
             <img src="/placeholder.svg" alt="Platform 2" className="h-8 invert" />
