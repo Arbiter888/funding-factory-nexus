@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
-  const [activeSection, setActiveSection] = useState<'syndicate' | null>('null');
+  const [activeSection, setActiveSection] = useState<'syndicate' | null>(null);
 
   return (
     <div className="pt-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary">
