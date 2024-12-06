@@ -12,13 +12,13 @@ const Index = () => {
         <section className="h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="inline-block mb-4 px-4 py-1 bg-gray-100 rounded-full text-sm text-gray-600 fade-in">
-              Empowering the next generation of founders
+              Bridging British & Commonwealth founders to US markets
             </span>
             <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-gray-900 slide-up">
-              Turning Visionaries into Leaders
+              Your Gateway to Global Growth
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto slide-up">
-              We partner with exceptional founders at the seed stage, providing capital and guidance to build category-defining companies.
+              We partner with exceptional British and Commonwealth founders at the seed stage, providing capital and strategic support for successful US market entry.
             </p>
             <div className="space-x-4 slide-up">
               <Link to="/seed-funding">
