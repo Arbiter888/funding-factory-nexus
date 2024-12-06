@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
-  const [activeSection, setActiveSection] = useState<'global' | 'scout' | null>(null);
+  const [activeSection, setActiveSection] = useState<'global' | 'syndicate' | null>(null);
 
   return (
     <div className="pt-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary">
@@ -39,11 +39,11 @@ export const Hero = () => {
           </Button>
           <Button 
             variant="outline" 
-            className={`border-primary/20 hover:bg-primary/10 ${activeSection === 'scout' ? 'ring-2 ring-primary' : ''}`}
-            onClick={() => setActiveSection(activeSection === 'scout' ? null : 'scout')}
+            className={`border-primary/20 hover:bg-primary/10 ${activeSection === 'syndicate' ? 'ring-2 ring-primary' : ''}`}
+            onClick={() => setActiveSection(activeSection === 'syndicate' ? null : 'syndicate')}
           >
             <Users className="mr-2 h-4 w-4" />
-            Join Scout Network
+            Join Angel Syndicate
           </Button>
         </div>
 
@@ -87,47 +87,36 @@ export const Hero = () => {
           </div>
         )}
 
-        {activeSection === 'scout' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 animate-in fade-in slide-in-from-bottom-4">
-            <div className="bg-secondary/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors">
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="h-6 w-6 text-primary" />
+        {activeSection === 'syndicate' && (
+          <div className="bg-secondary/50 backdrop-blur-sm rounded-xl p-6 mb-16 max-w-3xl mx-auto border border-primary/20 animate-in fade-in slide-in-from-bottom-4">
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Join Our Angel Syndicate</h2>
+            <p className="text-muted-foreground mb-6">
+              Become part of an exclusive network of angel investors and get access to pre-vetted investment opportunities
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-6">
+              <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
+                <div className="flex items-center gap-2 mb-2">
+                  <Brain className="h-5 w-5 text-primary" />
+                  <h3 className="font-semibold text-foreground">Expert Due Diligence</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Access thoroughly vetted investment opportunities with comprehensive analysis</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Scout Analysis</h3>
-              <p className="text-muted-foreground">
-                Join our network of scouts to identify and evaluate promising startups in your region.
-              </p>
-            </div>
-
-            <div className="bg-secondary/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors">
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <LineChart className="h-6 w-6 text-primary" />
+              <div className="bg-background/50 p-4 rounded-lg border border-primary/20">
+                <div className="flex items-center gap-2 mb-2">
+                  <Users className="h-5 w-5 text-primary" />
+                  <h3 className="font-semibold text-foreground">Exclusive Network</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">Connect with experienced investors and industry experts</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Deal Flow</h3>
-              <p className="text-muted-foreground">
-                Get access to exclusive deal flow and earn carried interest on successful investments.
-              </p>
             </div>
-
-            <div className="bg-secondary/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors">
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Network Access</h3>
-              <p className="text-muted-foreground">
-                Connect with other scouts and investors in our global network.
-              </p>
-            </div>
-
-            <div className="bg-secondary/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors">
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <MessageSquare className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Expert Support</h3>
-              <p className="text-muted-foreground">
-                Receive guidance and support from our experienced investment team.
-              </p>
-            </div>
+            <Link to="/angel-syndicate">
+              <Button variant="outline" className="border-primary/20 hover:bg-primary/10">
+                Learn More About Angel Syndicate
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Button>
+            </Link>
           </div>
         )}
 
