@@ -12,8 +12,22 @@ export const Hero = () => {
   };
 
   return (
-    <div className="pt-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary">
-      <div className="max-w-7xl mx-auto text-center">
+    <div className="relative pt-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary min-h-screen">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("/lovable-uploads/16743bba-b748-465a-ae2d-f299f491f4d8.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" /> {/* Dark overlay */}
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
         <h1 className="text-5xl sm:text-6xl font-bold mb-6">
           <span className="text-foreground">Bringing </span>
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">American Risk Capital</span>
